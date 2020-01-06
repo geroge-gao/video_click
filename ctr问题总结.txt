@@ -1,0 +1,233 @@
+# 时间
+1.给了前三天数据(有标签)，让预测今天数据
+
+# 时间特征
+
+第一步进行验证集划分，将前面两天分为训练集，第三天作为测试集对模型进行验证
+然后将三天都作为训练集预测测试机
+或者第九天第十天做训练，预测第11天
+2.判断老用户，新用户，2/3老用户,1/3新用户
+3、newsid的情况
+一半newsid昨天出现今天也出现
+newsid历史转换率
+
+4. timestamp和ts表示用户反馈时间
+timestamp早于ts，先推送，后计算
+
+5.network
+网络特征
+
+重要组合特征
+************** test predict **************
+runtime: 70142.77089953423
+=============================================== feat importances ===============================================
+deviceid = 106912.0
+newsid = 51247.5
+device_version = 46392.5
+lat = 19270.5
+lng = 19218.5
+lng_lat = 12936.0
+netmodel_deviceid_next1_exposure_ts_gap = 9233.5
+deviceid_next3_exposure_ts_gap = 5701.0
+netmodel_deviceid_next2_exposure_ts_gap = 5064.0
+netmodel_deviceid_next3_exposure_ts_gap = 4904.0
+pos_netmodel_deviceid_next1_exposure_ts_gap = 4609.0
+deviceid_next1_exposure_ts_gap = 4159.0
+cross_lng_lat_pos_ent = 2750.0
+cross_deviceid_newsid_count = 2713.0
+pos = 2710.5
+deviceid_next2_exposure_ts_gap = 2631.5
+deviceid_next5_exposure_ts_gap = 2331.5
+pos_count = 2321.0
+netmodel_deviceid_next10_exposure_ts_gap = 2239.5
+netmodel_deviceid_next5_exposure_ts_gap = 1955.5
+cross_deviceid_pos_ent = 1896.5
+pos_netmodel_deviceid_next2_exposure_ts_gap = 1712.5
+lng_lat_next1_exposure_ts_gap = 1695.5
+pos_deviceid_prev_day_ctr = 1691.5
+pos_deviceid_next1_exposure_ts_gap = 1423.0
+deviceid_prev_day_ctr = 1322.5
+pos_deviceid_lng_lat_next1_exposure_ts_gap = 1238.0
+cross_pos_netmodel_count = 1033.0
+lng_lat_next3_exposure_ts_gap = 1030.5
+lng_lat_next2_exposure_ts_gap = 1023.0
+cross_pos_lng_lat_count_ratio = 977.5
+pos_netmodel_deviceid_next3_exposure_ts_gap = 972.0
+cross_netmodel_pos_count_ratio = 966.5
+netmodel_deviceid_prev1_exposure_ts_gap = 956.5
+cross_pos_deviceid_count_ratio = 857.5
+netmodel_deviceid_prev5_exposure_ts_gap = 856.5
+deviceid_next10_exposure_ts_gap = 850.5
+deviceid_prev_day_count = 796.0
+netmodel_count = 738.5
+pos_deviceid_next2_exposure_ts_gap = 735.0
+cross_pos_netmodel_ent = 735.0
+cross_pos_netmodel_count_ratio = 705.5
+netmodel_deviceid_prev10_exposure_ts_gap = 702.0
+pos_netmodel_deviceid_prev1_exposure_ts_gap = 701.5
+cross_netmodel_lng_lat_count_ratio = 701.0
+cross_deviceid_pos_nunique = 674.0
+deviceid_prev1_exposure_ts_gap = 670.0
+cross_newsid_deviceid_count_ratio = 655.5
+pos_deviceid_lng_lat_next2_exposure_ts_gap = 639.5
+netmodel_deviceid_prev3_exposure_ts_gap = 628.0
+pos_newsid_next1_exposure_ts_gap = 623.5
+cross_pos_newsid_ent = 566.5
+pos_deviceid_prev_day_count = 565.0
+lng_lat_next10_exposure_ts_gap = 564.0
+deviceid_prev2_exposure_ts_gap = 552.0
+cross_pos_deviceid_nunique = 525.0
+cross_lng_lat_pos_nunique = 510.0
+netmodel_deviceid_prev2_exposure_ts_gap = 508.5
+cross_deviceid_netmodel_count_ratio = 492.0
+cross_netmodel_deviceid_count_ratio = 483.0
+newsid_next1_exposure_ts_gap = 476.0
+pos_newsid_prev1_exposure_ts_gap = 457.5
+newsid_prev10_exposure_ts_gap = 454.5
+cross_lng_lat_pos_count_ratio = 451.0
+newsid_next10_exposure_ts_gap = 430.0
+cross_netmodel_newsid_count_ratio = 425.0
+pos_deviceid_next3_exposure_ts_gap = 415.5
+cross_deviceid_pos_count_ratio = 405.5
+pos_lng_lat_next1_exposure_ts_gap = 394.5
+newsid_prev1_exposure_ts_gap = 380.0
+cross_deviceid_pos_nunique_ratio_deviceid_count = 370.5
+lng_lat_next5_exposure_ts_gap = 367.0
+deviceid_prev5_exposure_ts_gap = 365.5
+cross_deviceid_newsid_count_ratio = 361.5
+pos_deviceid_prev1_exposure_ts_gap = 357.5
+cross_deviceid_netmodel_count = 331.5
+pos_netmodel_deviceid_next5_exposure_ts_gap = 320.5
+cross_netmodel_lng_lat_count = 313.5
+deviceid_prev10_exposure_ts_gap = 303.5
+cross_pos_deviceid_ent = 300.0
+pos_netmodel_deviceid_prev2_exposure_ts_gap = 298.5
+pos_netmodel_deviceid_prev3_exposure_ts_gap = 296.0
+pos_netmodel_deviceid_prev5_exposure_ts_gap = 295.5
+cross_newsid_lng_lat_count = 293.5
+cross_netmodel_deviceid_ent = 293.0
+cross_lng_lat_netmodel_count_ratio = 285.5
+deviceid_prev_day_click_count = 284.5
+cross_newsid_pos_ent = 278.0
+cross_newsid_netmodel_count_ratio = 276.5
+pos_lng_lat_next2_exposure_ts_gap = 274.5
+pos_netmodel_deviceid_prev10_exposure_ts_gap = 271.0
+cross_lng_lat_netmodel_ent = 267.5
+pos_deviceid_lng_lat_next5_exposure_ts_gap = 260.5
+pos_deviceid_lng_lat_next3_exposure_ts_gap = 246.0
+cross_pos_lng_lat_nunique_ratio_pos_count = 236.0
+deviceid_prev3_exposure_ts_gap = 234.0
+pos_deviceid_lng_lat_prev1_exposure_ts_gap = 233.5
+newsid_prev3_exposure_ts_gap = 220.5
+cross_newsid_lng_lat_count_ratio = 220.0
+cross_deviceid_lng_lat_count = 215.5
+pos_newsid_next10_exposure_ts_gap = 210.0
+pos_deviceid_prev_day_click_count = 208.5
+cross_deviceid_lng_lat_nunique_ratio_deviceid_count = 205.5
+cross_newsid_deviceid_nunique_ratio_newsid_count = 205.0
+newsid_next3_exposure_ts_gap = 200.5
+cross_newsid_netmodel_nunique_ratio_newsid_count = 200.0
+newsid_prev5_exposure_ts_gap = 199.0
+lng_lat_prev1_exposure_ts_gap = 198.0
+pos_deviceid_next5_exposure_ts_gap = 197.5
+cross_newsid_netmodel_count = 188.5
+cross_newsid_pos_count_ratio = 186.0
+newsid_next2_exposure_ts_gap = 183.5
+cross_deviceid_netmodel_ent = 183.0
+newsid_next5_exposure_ts_gap = 177.5
+newsid_prev2_exposure_ts_gap = 176.0
+lng_lat_prev10_exposure_ts_gap = 173.5
+cross_newsid_pos_nunique_ratio_newsid_count = 168.0
+pos_deviceid_prev3_exposure_ts_gap = 167.5
+pos_deviceid_prev5_exposure_ts_gap = 163.5
+cross_newsid_netmodel_ent = 162.5
+pos_deviceid_prev10_exposure_ts_gap = 161.5
+pos_deviceid_prev2_exposure_ts_gap = 157.0
+pos_deviceid_next10_exposure_ts_gap = 155.5
+cross_lng_lat_pos_nunique_ratio_lng_lat_count = 155.5
+lng_lat_prev2_exposure_ts_gap = 147.5
+pos_newsid_next5_exposure_ts_gap = 147.0
+cross_deviceid_newsid_nunique_ratio_deviceid_count = 145.5
+cross_deviceid_pos_count = 144.5
+device_version_count = 144.0
+pos_lng_lat_next5_exposure_ts_gap = 143.0
+cross_newsid_lng_lat_nunique_ratio_newsid_count = 141.5
+newsid_count = 138.0
+pos_netmodel_deviceid_next10_exposure_ts_gap = 138.0
+pos_newsid_prev5_exposure_ts_gap = 135.0
+cross_newsid_lng_lat_ent = 135.0
+pos_lng_lat_next3_exposure_ts_gap = 131.5
+pos_newsid_prev10_exposure_ts_gap = 126.5
+cross_lng_lat_newsid_nunique = 122.5
+lng_lat_prev5_exposure_ts_gap = 118.5
+pos_deviceid_lng_lat_prev3_exposure_ts_gap = 115.0
+cross_deviceid_newsid_ent = 112.0
+pos_newsid_prev3_exposure_ts_gap = 111.5
+pos_newsid_next2_exposure_ts_gap = 108.5
+app_version = 108.0
+pos_lng_lat_prev1_exposure_ts_gap = 108.0
+pos_deviceid_lng_lat_prev2_exposure_ts_gap = 106.5
+pos_deviceid_lng_lat_next10_exposure_ts_gap = 106.0
+cross_lng_lat_newsid_count_ratio = 105.5
+pos_newsid_prev2_exposure_ts_gap = 104.0
+cross_pos_newsid_count_ratio = 104.0
+pos_deviceid_lng_lat_prev10_exposure_ts_gap = 101.0
+cross_deviceid_netmodel_nunique_ratio_deviceid_count = 99.5
+cross_newsid_pos_count = 98.5
+pos_newsid_next3_exposure_ts_gap = 96.5
+pos_deviceid_lng_lat_prev5_exposure_ts_gap = 96.5
+cross_deviceid_newsid_nunique = 96.0
+cross_newsid_deviceid_ent = 95.0
+deviceid_count = 90.0
+lng_lat_prev3_exposure_ts_gap = 86.5
+pos_lng_lat_next10_exposure_ts_gap = 85.0
+cross_lng_lat_newsid_ent = 84.5
+pos_lng_lat_prev3_exposure_ts_gap = 82.5
+cross_newsid_deviceid_nunique = 81.5
+cross_deviceid_lng_lat_count_ratio = 78.0
+minute = 77.0
+cross_lng_lat_deviceid_count_ratio = 77.0
+pos_lng_lat_prev2_exposure_ts_gap = 76.5
+cross_lng_lat_newsid_nunique_ratio_lng_lat_count = 67.0
+pos_lng_lat_prev10_exposure_ts_gap = 66.5
+cross_newsid_lng_lat_nunique = 65.0
+pos_lng_lat_prev5_exposure_ts_gap = 64.0
+device_vendor = 62.5
+cross_netmodel_deviceid_nunique = 62.5
+hour = 58.5
+cross_pos_deviceid_nunique_ratio_pos_count = 57.5
+cross_newsid_pos_nunique = 57.0
+cross_lng_lat_deviceid_nunique_ratio_lng_lat_count = 56.0
+lat_count = 54.0
+cross_pos_lng_lat_count = 52.5
+cross_deviceid_lng_lat_ent = 49.0
+cross_lng_lat_netmodel_nunique_ratio_lng_lat_count = 49.0
+lng_count = 48.5
+app_version_count = 47.5
+device_vendor_count = 46.0
+cross_pos_lng_lat_ent = 29.5
+cross_deviceid_lng_lat_nunique = 28.0
+cross_netmodel_lng_lat_ent = 22.0
+cross_newsid_netmodel_nunique = 20.5
+cross_netmodel_deviceid_nunique_ratio_netmodel_count = 19.0
+osversion_count = 16.0
+lng_lat_count = 14.0
+osversion = 13.5
+cross_lng_lat_netmodel_nunique = 9.0
+cross_pos_newsid_nunique = 7.0
+cross_pos_newsid_nunique_ratio_pos_count = 7.0
+cross_deviceid_netmodel_nunique = 6.5
+netmodel = 3.0
+cross_pos_netmodel_nunique_ratio_pos_count = 3.0
+cross_netmodel_newsid_nunique_ratio_netmodel_count = 3.0
+cross_netmodel_newsid_ent = 2.5
+cross_netmodel_lng_lat_nunique_ratio_netmodel_count = 2.5
+cross_lng_lat_deviceid_ent = 1.5
+cross_netmodel_newsid_nunique = 1.0
+cross_lng_lat_deviceid_nunique = 0.5
+cross_pos_netmodel_nunique = 0.0
+cross_pos_lng_lat_nunique = 0.0
+cross_netmodel_pos_nunique = 0.0
+cross_netmodel_pos_ent = 0.0
+cross_netmodel_pos_nunique_ratio_netmodel_count = 0.0
+cross_netmodel_lng_lat_nunique = 0.0
